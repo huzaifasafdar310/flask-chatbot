@@ -1,0 +1,48 @@
+🔹 Step 1: Define the Scope (HR/FAQ Bot Example)
+
+Your bot should handle two types of queries:
+
+Static FAQs → like “What is the company policy on overtime?”
+
+These answers come from a pre-written knowledge base (text/JSON/CSV).
+
+Dynamic queries → like “How many leaves do I have left?”
+
+These need logic + data from a database (e.g., user records).
+
+🔹 Step 2: Tech Stack
+
+Backend: Flask (simple web app with APIs)
+
+Frontend: HTML/CSS/JS (or Streamlit for quicker prototyping)
+
+NLP: HuggingFace (to classify intent), spaCy (optional for NER like dates, names, etc.)
+
+AI: Groq (LLaMA 3) or OpenAI (for natural answers)
+
+Database: SQLite/MySQL (for employee-specific queries like leave balance)
+
+🔹 Step 3: Workflow
+
+User asks a question in chat.
+Example: “What is the leave policy?”
+
+Intent Detection
+
+Classify: Is this an FAQ or Employee-specific query?
+
+(HuggingFace intent classifier or simple keyword search at first).
+
+Knowledge Retrieval / DB Query
+
+If FAQ → search in FAQ dataset.
+
+If Dynamic → fetch from database (e.g., leave balance = 5 days).
+
+AI Layer (Groq/OpenAI)
+
+Pass query + retrieved answer into LLM → make reply more natural.
+
+Example: “You currently have 5 casual leaves left. Do you want me to show how to apply them?”
+
+Send response back to frontend → render in chat UI.

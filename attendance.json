@@ -1,0 +1,18 @@
+{
+    "huzaifa": [
+        {
+            "type": "attendance",
+            "time": "2025-08-28 23:48:06"
+        }
+    ],
+    "ali": [
+        {
+            "type": "attendance",
+            "time": "2025-08-28 23:52:57"
+        },
+        {
+            "type": "leave",
+            "time": "2025-08-28"
+        }
+    ]
+}
